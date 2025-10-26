@@ -1,0 +1,304 @@
+.profile-section .container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--y-space-20);
+}
+
+/* Tab Content Visibility */
+
+.profile-section .container .bottom {
+  display: grid;
+  grid-template-columns: 246px 1fr;
+  gap: var(--y-space-48);
+  align-items: start;
+}
+
+.profile-section .sidbar {
+  display: flex;
+  flex-direction: column;
+  gap: var(--y-space-24);
+}
+
+.profile-section .top {
+  margin-top: var(--y-space-20);
+  display: grid;
+  grid-template-columns: 246px;
+}
+.profile-section .top .main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--y-space-16);
+}
+
+.profile-section .top .main img {
+  width: var(--y-space-120);
+  height: var(--y-space-120);
+  object-fit: cover;
+  border-radius: var(--y-space-80);
+}
+.profile-section .top .main p {
+  font-size: var(--y-space-26);
+  font-weight: 700;
+  color: var(--y-color-primary);
+}
+
+.profile-section .sidbar .tabs {
+  display: flex;
+  flex-direction: column;
+  gap: var(--y-space-16);
+  background-color: var(--y-color-primary);
+  padding: var(--y-space-16);
+  border-radius: var(--y-space-22);
+}
+
+.profile-section .sidbar .tabs button,
+.profile-section .sidbar .tabs a {
+  display: flex;
+  align-items: center;
+  gap: var(--y-space-16);
+  background-color: transparent;
+  color: var(--y-color-bg);
+  font-size: var(--y-space-20);
+  font-weight: 500;
+  padding: var(--y-space-12) var(--y-space-12);
+  border-radius: var(--y-space-22);
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.profile-section .sidbar .tabs button:hover,
+.profile-section .sidbar .tabs a:hover {
+  background-color: var(--y-color-secondary);
+  color: var(--y-color-bg);
+}
+.profile-section .sidbar .tabs button.active,
+.profile-section .sidbar .tabs a.active {
+  background-color: var(--y-color-secondary) !important;
+  color: var(--y-color-bg) !important;
+}
+.profile-section .sidbar .tabs button i {
+  font-size: var(--y-space-20);
+  color: var(--y-color-bg);
+}
+
+.profile-section .tab-content {
+  display: none;
+}
+
+.profile-section .tab-content.active {
+  display: flex;
+  flex-direction: column;
+  gap: var(--y-space-40);
+}
+
+.profile-section form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--y-space-26);
+  border: 2px solid var(--y-color-primary);
+  padding: var(--y-space-26);
+  border-radius: var(--y-space-22);
+}
+.profile-section form .form-group {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--y-space-10);
+}
+.profile-section form .form-group .group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--y-space-8);
+}
+.profile-section form label {
+  font-size: var(--y-space-20);
+  font-weight: 500;
+  color: var(--y-color-text);
+}
+.profile-section form input:not([type="file"]) {
+  width: 100%;
+  padding: var(--y-space-12) var(--y-space-12);
+  border: 1px solid var(--y-color-primary);
+  border-radius: var(--y-space-40);
+  background: transparent;
+}
+
+.profile-section form input:focus {
+  border-color: var(--y-color-primary);
+  box-shadow: 0 0 0 3px
+    color-mix(in oklab, var(--y-color-primary) 20%, transparent);
+  outline: none;
+}
+.profile-section form button {
+  width: fit-content;
+  padding: var(--y-space-12) var(--y-space-32);
+  border-radius: var(--y-space-40);
+  background-color: var(--y-color-primary);
+  color: var(--y-color-bg);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: var(--y-space-20);
+  font-weight: 500;
+}
+.profile-section form button:hover {
+  background-color: var(--y-color-secondary);
+  color: var(--y-color-bg);
+}
+
+.profile-section .settings-div {
+  display: flex;
+  flex-direction: column;
+  gap: var(--y-space-24);
+  width: fit-content;
+  margin-top: var(--y-space-32);
+  border: 2px solid var(--y-color-primary);
+  padding: var(--y-space-24);
+  border-radius: var(--y-space-22);
+}
+.profile-section .settings-div .card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--y-space-16);
+}
+.profile-section .settings-div .card .header {
+  display: flex;
+  align-items: center;
+  gap: var(--y-space-16);
+}
+.profile-section .settings-div .card .header i {
+  font-size: var(--y-space-20);
+  color: var(--y-color-primary);
+}
+
+.profile-section .settings-div .card .content {
+  display: grid;
+  grid-template-columns: 400px 200px;
+}
+.profile-section .settings-div .card .content p {
+  font-size: var(--y-space-20);
+  color: var(--y-color-text);
+  text-align: justify;
+}
+.profile-section .settings-div .card .content button {
+  background-color: transparent;
+  width: fit-content;
+  justify-self: self-end;
+  color: red;
+  padding: var(--y-space-10) var(--y-space-20);
+  border-radius: var(--y-space-40);
+  border: 1px solid red;
+  cursor: pointer;
+  font-size: var(--y-space-20);
+  font-weight: 500;
+  align-self: center;
+  transition: all 0.3s ease;
+}
+.profile-section .settings-div .card .content button:hover {
+  background-color: red;
+  color: var(--y-color-bg);
+}
+
+.profile-section .settings-div .card .content .notification-toggle {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+  justify-self: self-end;
+  cursor: pointer;
+  align-self: center;
+}
+
+.profile-section .settings-div .card .content .notification-toggle input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.profile-section
+  .settings-div
+  .card
+  .content
+  .notification-toggle
+  .toggle-slider {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: transparent;
+  border: 1px solid var(--y-color-primary);
+  border-radius: var(--y-space-40);
+  transition: all 0.3s ease;
+}
+
+.profile-section
+  .settings-div
+  .card
+  .content
+  .notification-toggle
+  .toggle-slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 3px;
+  background-color: var(--y-color-primary);
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.profile-section
+  .settings-div
+  .card
+  .content
+  .notification-toggle
+  input:checked
+  + .toggle-slider {
+  background-color: var(--y-color-primary);
+  border-color: var(--y-color-primary);
+}
+
+.profile-section
+  .settings-div
+  .card
+  .content
+  .notification-toggle
+  input:checked
+  + .toggle-slider:before {
+  background-color: var(--y-color-bg);
+  transform: translateX(26px);
+}
+
+@media (max-width: 768px) {
+  .profile-section .container .bottom {
+    grid-template-columns: 1fr;
+  }
+  .profile-section .settings-div .card .content {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .profile-section .top {
+    grid-template-columns: 1fr;
+  }
+  .profile-section .top .main {
+    flex-direction: row;
+  }
+  .profile-section form .form-group {
+    grid-template-columns: 1fr;
+  }
+
+  .profile-section .settings-div .card .content .notification-toggle {
+    justify-self: flex-start;
+  }
+  .profile-section .settings-div .card .content button {
+    justify-self: flex-start;
+  }
+  .profile-section .settings-div .card .content {
+    gap: var(--y-space-22);
+  }
+  .profile-section .settings-div {
+    gap: var(--y-space-46);
+  }
+}

@@ -1,0 +1,9 @@
+.panner {
+  background: url(../../assets/panner.png);
+  background-size: cover;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  height: 185px;
+  margin-top: var(--y-space-120);
+  filter: hue-rotate(299deg);
+}

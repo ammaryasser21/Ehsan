@@ -1,0 +1,183 @@
+.auth-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--y-space-50) 0;
+  margin-bottom: 0;
+  margin-top: var(--y-space-66);
+}
+.auth-section .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.auth-section .container.right-left:not(:has(.left)){
+display: flex;
+justify-content: center;
+align-items: center;
+  
+}
+.auth-section .container.right-left:has(.left) {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--y-space-32);
+}
+.auth-section .container.right-left .right {
+  width: 100%;
+}
+.auth-section .container.right-left:not(:has(.left)) .right {
+  max-width: 675px;
+}
+.auth-section .container.right-left .left {
+  width: 100%;
+}
+
+.auth-section .container .right {
+  width: 50%;
+  display: grid;
+  place-items: center;
+}
+.auth-section .container .right h2 {
+  width: 100%;
+  padding-bottom: 0;
+  font-weight: 600;
+  color: var(--y-color-primary);
+  display: flex;
+  align-items: center;
+  gap: var(--y-space-8);
+}
+.auth-section .checkbox {
+  display: flex;
+  align-items: center;
+  gap: var(--y-space-8);
+}
+.auth-section .checkbox input {
+  width: var(--y-space-40);
+  height: var(--y-space-40);
+  border-radius: var(--y-space-40);
+  accent-color: var(--y-color-primary);
+  background-color: var(--y-color-bg);
+  border: 1px solid var(--y-color-primary);
+}
+.auth-section .checkbox input:checked {
+  background-color: var(--y-color-primary);
+}
+.auth-section .container .left {
+  width: 50%;
+  display: grid;
+  place-items: center;
+}
+.auth-section .container .right p {
+  font-size: var(--y-space-16);
+  font-weight: 300;
+  text-align: justify;
+}
+.auth-section .container .left img {
+  height: 573px;
+  width: 100%;
+  object-fit: cover;
+  border-radius: var(--y-space-30);
+}
+.auth-section form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--y-space-32);
+  padding: var(--y-space-28) var(--y-space-42);
+  width: 100%;
+  background: #a5a5a52b;
+  border-radius: var(--y-space-30);
+}
+.auth-section form .form-group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--y-space-8);
+}
+.auth-section form .form-group input {
+  width: 100%;
+  padding: var(--y-space-12) var(--y-space-12);
+  border: 1px solid var(--y-color-primary);
+  border-radius: var(--y-space-40);
+}
+.auth-section form .form-group input:focus {
+  border-color: var(--y-color-primary);
+  box-shadow: 0 0 0 3px
+    color-mix(in oklab, var(--y-color-primary) 20%, transparent);
+  outline: none;
+}
+.auth-section form .form-group input:disabled {
+  background-color: var(--y-color-border);
+  cursor: not-allowed;
+}
+.auth-section form .form-group input:read-only {
+  background-color: var(--y-color-border);
+  cursor: not-allowed;
+}
+.auth-section form button {
+  width: fit-content;
+  padding: var(--y-space-12) var(--y-space-32);
+  border-radius: var(--y-space-40);
+  background-color: var(--y-color-primary);
+  color: var(--y-color-bg);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: var(--y-space-20);
+  font-weight: 500;
+}
+
+.auth-section form button:hover {
+  background-color: var(--y-color-secondary);
+  color: var(--y-color-bg);
+}
+
+.auth-section form .form-group label {
+  font-size: var(--y-space-20);
+  font-weight: 500;
+  color: var(--y-color-text);
+}
+.auth-section form .links {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.auth-section form .links a {
+  font-size: var(--y-space-20);
+  font-weight: 500;
+  color: var(--y-color-primary);
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+.auth-section form .links a:hover {
+  color: var(--y-color-secondary);
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .auth-section .container {
+    flex-direction: column-reverse;
+    gap: var(--y-space-44);
+  }
+  .auth-section .container .right {
+    width: 100%;
+  }
+  .auth-section .container .left {
+    width: 100%;
+  }
+
+  .auth-section .container .left img {
+    height: 300px;
+    display: none;
+  }
+  .auth-section .container .right h2 {
+    padding-right: 0;
+    padding-bottom: var(--y-space-24);
+  }
+  .auth-section .container.right-left {
+    grid-template-columns: 1fr;
+  }
+  .auth-section form .links {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

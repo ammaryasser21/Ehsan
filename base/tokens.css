@@ -1,0 +1,106 @@
+:root {
+  --y-color-primary: #388E3C;
+  --y-color-secondary: #bec3be;
+  --y-color-bg: #ffffff;
+  --y-color-primary-light: #52d658;
+  --y-color-fg: #bec3be;
+  --y-color-border: #5A5959;
+  
+
+  --y-border:2px solid var(--y-color-border);
+  --y-color-text: #050d06;
+  --y-color-muted: #233324;
+  --y-color-i: #98d49b;
+
+  --y-color-transparency: transparent;
+
+  --y-f-b: 700;
+  --y-f-m: 500;
+  --y-f-n: 400;
+  --y-f-l: 300;
+
+  --y-space-0: 0;
+  --y-space-2: 2px;
+  --y-space-4: 4px;
+  --y-space-6: 6px;
+  --y-space-8: 8px;
+  --y-space-10: 10px;
+  --y-space-12: 12px;
+  --y-space-14: 14px;
+  --y-space-16: 16px;
+  --y-space-18: 18px;
+  --y-space-20: 20px;
+  --y-space-22: 22px;
+  --y-space-24: 24px;
+  --y-space-26: 26px;
+  --y-space-28: 28px;
+  --y-space-30: 30px;
+  --y-space-32: 32px;
+  --y-space-34: 34px;
+  --y-space-36: 36px;
+  --y-space-38: 38px;
+  --y-space-40: 40px;
+  --y-space-42: 42px;
+  --y-space-44: 44px;
+  --y-space-46: 46px;
+  --y-space-48: 48px;
+  --y-space-50: 50px;
+  --y-space-52: 52px;
+  --y-space-54: 54px;
+  --y-space-56: 56px;
+  --y-space-58: 58px;
+  --y-space-60: 60px;
+  --y-space-62: 62px;
+  --y-space-64: 64px;
+  --y-space-66: 66px;
+  --y-space-80: 80px;
+  --y-space-96: 96px;
+  --y-space-104: 104px;
+  --y-space-120: 120px;
+  --y-space-144: 144px;
+  --y-space-168: 168px;
+  --y-space-180: 180px;
+  --y-space-196: 196px;
+  --y-space-192: 192px;
+  --y-space-216: 216px;
+  --y-space-240: 240px;
+  --y-space-256: 256px;
+  --y-space-264: 264px;
+  --y-space-288: 288px;
+  --y-space-312: 312px;
+  --y-space-328: 328px;
+  --y-space-336: 336px;
+  --y-space-360: 360px;
+  --y-space-376: 376px;
+  --y-space-392: 392px;
+  --y-space-408: 408px;
+  --y-space-424: 424px;
+  --y-space-440: 440px;
+  --y-space-456: 456px;
+  --y-space-472: 472px;
+  --y-space-488: 488px;
+  --y-space-504: 504px;
+  --y-space-520: 520px;
+  --y-space-536: 536px;
+  --y-space-552: 552px;
+  --y-space-568: 568px;
+  --y-space-584: 584px;
+  --y-space-600: 600px;
+
+
+  --y-font-sans: "Cairo", ui-sans-serif, system-ui, -apple-system, Segoe UI,
+    Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+
+  --y-line-compact: 1.25;
+  --y-line-tight: 1.1;
+  --y-line-normal: 1.6;
+  --y-line-relaxed: 1.8;
+  --y-line-loose: 2;
+  --y-line-huge: 2.4;
+  --y-line-massive: 3;
+
+  --y-transition-f:all 120ms ease;
+  --y-transition:all 200ms ease;
+  --y-transition-s:all 320ms ease;
+}
+

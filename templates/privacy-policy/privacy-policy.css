@@ -1,0 +1,17 @@
+.privacy-policy .container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--y-space-16);
+}
+.privacy-policy .container h2 {
+  font-size: var(--y-space-32);
+  font-weight: 700;
+  color: var(--y-color-text);
+  padding-bottom: 0 !important;
+}
+.privacy-policy .container p {
+  font-size: var(--y-space-24);
+  font-weight: 300;
+  color: var(--y-color-muted);
+  padding-bottom: var(--y-space-24);
+}

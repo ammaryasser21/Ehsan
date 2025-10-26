@@ -1,0 +1,197 @@
+.payment-section {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: var(--y-space-24);
+  align-items: start;
+}
+
+.radio-group {
+  display: flex;
+  align-items: center;
+  gap: var(--y-space-10);
+  width: max-content;
+  padding-inline: var(--y-space-42);
+  background-color: var(--y-color-primary-light);
+  padding: var(--y-space-10);
+  border: 2px solid var(--y-color-border-primary);
+  border-radius: var(--y-space-48);
+  color: var(--y-color-border-primary);
+  padding-inline: var(--y-space-6);
+  padding-left: var(--y-space-32);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.radio-group:has(input[type="radio"]:checked) {
+  background-color: var(--y-color-primary);
+  border: var(--y-color-primary);
+  border-radius: var(--y-space-48);
+  color: var(--y-color-bg);
+}
+.radio-group:has(input[type="radio"]:checked) label {
+  color: var(--y-color-bg);
+}
+
+/* .payment-section form input[type="radio" i]:checked {
+  outline: 5px solid var(--y-color-fg);
+  background-color: var(--y-color-text);
+} */
+
+.payment-section .total {
+  display: flex;
+  flex-direction: column;
+  gap: var(--y-space-16);
+  color: var(--y-color-text);
+  background-color: var(--y-color-primary);
+  padding: var(--y-space-26);
+  border-radius: var(--y-space-22);
+}
+.payment-section .total h3 {
+  font-size: var(--y-space-24);
+  font-weight: 700;
+  color: var(--y-color-bg);
+}
+.payment-section .total img {
+  width: 24px;
+  height: 24px;
+  mix-blend-mode: plus-lighter;
+  filter: brightness(7.5);
+}
+.payment-section .total p {
+  display: flex;
+  align-items: center;
+  gap: var(--y-space-8);
+  font-size: var(--y-space-20);
+  font-weight: 600;
+  color: var(--y-color-bg);
+}
+
+.payment-section form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--y-space-26);
+  border: 2px solid var(--y-color-primary);
+  padding: var(--y-space-26);
+  border-radius: var(--y-space-22);
+}
+.payment-section form .form-group {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--y-space-10);
+}
+.payment-section form .form-group .group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--y-space-8);
+}
+.payment-section form label {
+  font-size: var(--y-space-20);
+  font-weight: 500;
+  color: var(--y-color-text);
+}
+.payment-section form input:not([type="file"]):not([type="radio"]),
+.payment-section form textarea {
+  width: 100%;
+  padding: var(--y-space-12) var(--y-space-12);
+  border: 1px solid var(--y-color-primary);
+  border-radius: var(--y-space-40);
+  background: transparent;
+}
+.payment-section form input[type="radio"] {
+  background-color: var(--y-color-primary);
+}
+.payment-section form input[type="radio" i] {
+  accent-color: var(--y-color-primary);
+  border: 2px solid var(--y-color-border-primary);
+  outline: var(--y-color-primary);
+  appearance: none;
+  width: 14px;
+  height: 14px;
+  background-color: var(--y-color-bg);
+  border-radius: 7px;
+  cursor: pointer;
+}
+.payment-section form input[type="radio" i]:checked {
+  background-color: var(--y-color-border-primary);
+  border: 2px solid var(--y-color-bg);
+}
+
+.payment-section .total .total-items {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.payment-section .total .total-items p:first-child {
+  font-weight: 700;
+  font-size: var(--y-space-16);
+}
+.payment-section .total .total-items p:last-child {
+  font-size: var(--y-space-16);
+  font-weight: 300;
+}
+.payment-section form button {
+  width: fit-content;
+  padding: var(--y-space-12) var(--y-space-32);
+  border-radius: var(--y-space-40);
+  background-color: var(--y-color-primary);
+  color: var(--y-color-bg);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: var(--y-space-20);
+  font-weight: 500;
+}
+.payment-section form button:hover {
+  background-color: var(--y-color-secondary);
+  color: var(--y-color-bg);
+}
+
+.payment-section form .buttons-group {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--y-space-10);
+}
+
+.payment-section form .buttons-group a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--y-space-8);
+  border: 1px solid var(--y-color-primary);
+  border-radius: var(--y-space-96);
+  transition: all 0.3s ease;
+}
+
+.payment-section form .buttons-group a:hover {
+  background-color: var(--y-color-primary);
+  color: var(--y-color-bg);
+}
+
+.payment-section form .buttons-group button {
+  width: 100%;
+  justify-content: center;
+}
+
+@media (max-width: 768px) {
+  .payment-section {
+    grid-template-columns: 1fr;
+  }
+  .payment-section form button {
+    width: 100%;
+    justify-content: center;
+  }
+  .payment-section form input:not([type="radio"]) {
+    width: 100% !important;
+  }
+  .radio-group {
+    width: 100%;
+  }
+  .payment-section form .buttons-group {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+}
+@media (max-width: 480px) {
+  .payment-section form .form-group {
+    grid-template-columns: 1fr;
+  }
+}
