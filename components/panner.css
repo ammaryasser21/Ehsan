@@ -3,7 +3,8 @@
   background-size: cover;
   background-position: bottom;
   background-repeat: no-repeat;
-  height: 185px;
+  height: 249px;
   margin-top: var(--y-space-120);
+  margin-bottom: var(--y-space-32);
   filter: hue-rotate(299deg);
 }

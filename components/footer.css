@@ -19,6 +19,7 @@ footer h2 {
   grid-template-columns: 1fr;
   flex-direction: column;
   align-items: center;
+  gap: var(--y-space-48);
 }
 footer .links {
   gap: var(--y-space-24);

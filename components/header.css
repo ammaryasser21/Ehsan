@@ -8,7 +8,7 @@ header {
 }
 
 header .container {
-  padding: var(--y-space-8) 0;
+  padding: var(--y-space-4) 0;
 }
 header .logo {
   gap: 32px;
@@ -35,7 +35,6 @@ header .logo .search-input {
   gap: var(--y-space-8);
   border-radius: var(--y-space-36);
   padding-right: var(--y-space-10);
-  width: 20vw;
 }
 
 header .logo .search-input img {

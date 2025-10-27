@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ehsaan </title>
+  <link rel="manifest" href="../manifest.json" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="../../base/reset.css" />
+  <link rel="stylesheet" href="../../base/tokens.css" />
+  <link rel="icon" href="../../assets/icon.png" />
+  <link rel="stylesheet" href="../../base/utilities.css" />
+  <link rel="stylesheet" href="../../base/typography.css" />
+  <link rel="stylesheet" href="../../components/buttons.css" />
+  <link rel="stylesheet" href="../../components/header.css" />
+  <link rel="stylesheet" href="../../components/footer.css" />
+  <link rel="stylesheet" href="../../components/panner.css" />
+  <link rel="stylesheet" href="../../components/special-form.css" />
+</head>
+
+<body>
+  <y-navbar></y-navbar>
+  <main>
+    <section class="panner">
+    </section>
+    <section class="contact-form-section">
+        <div class="container y-u-max-w-1200">
+          <div class="header">
+            <img src="../../assets/email-white.svg" alt="">
+            <h2>  طلب مساعدة</h2>
+          </div>
+          <div class="right-left">
+            <div class="right">
+  
+              <form action="">
+                <p>احسان الخيرية بيت الخير , نحن هنا لمساعدتك يرجي ارسال بياناتك و سنقوم بالتواصل معاك بعد دراسة حالتك و ادراجها في وقت التنفيذ المناسب نظرا لاننا نتلاقي الاف طلبات المساعدة يومياً.</p>
+                <div class="form-group">
+                  <div class="group">
+                    <label for="name">الاسم </label>
+                    <input type="text" id="name" name="name" placeholder="اكتب الاسم بالكامل">
+                  </div><div class="group">
+                    <label for="number"> رقم الهاتف</label>
+                    <input type="number" id="number" name="number" placeholder="اكتب رقم الهاتف بدون رموز">
+                  </div>
+                  
+                </div>             
+                <div class="group">
+                    <label for="id"> الرقم القومي</label>
+                    <input type="number" id="id" name="id" placeholder="الرقم القومي لا يقل عن 14 رقم">
+                  </div>
+                  <div class="form-group">
+                    <div class="group">
+                      <label for="job">وظيفتك </label>
+                      <input type="text" id="job" name="job" placeholder="اكتب وظيفتك">
+                    </div><div class="group">
+                      <label for="location">  مكان الإقامة</label>
+                      <input type="text" id="location" name="location" placeholder=" حي الملك فيصل">
+                    </div>
+                    
+                  </div>  
+                  <div class="group">
+                    <label for="description"> وصف لحالتك المطلوب المساعدة لها</label>
+                    <textarea type="text" id="description" name="description" placeholder="اكتب وصف لحالتك المطلوب المساعدة لها"></textarea>
+                  </div>
+  
+                <button type="submit"> ارسال</button>
+              </form>
+  
+            </div>
+          </div>
+  
+        </div>
+  
+  
+  
+  
+      </section>
+  </main>
+
+  <y-footer></y-footer>
+  <script src="../../js/y-app-init.js"></script>
+</body>
+
+</html>

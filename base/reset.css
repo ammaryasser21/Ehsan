@@ -99,6 +99,9 @@ section {
   margin-bottom: var(--y-space-96);
   padding-bottom: var(--y-space-16);
 }
+section:last-child {
+  margin-bottom: var(--y-space-32);
+}
 
 section:first-child {
   padding-top: var(--y-space-80);

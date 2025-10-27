@@ -1,0 +1,17 @@
+.categories-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: var(--y-space-24);
+  }
+  .categories-grid .category-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .categories-grid .category-item img {
+    width: 100%;
+    object-fit: contain;
+    mix-blend-mode: darken;
+    aspect-ratio: 1 / 1;
+  }
