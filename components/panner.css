@@ -8,3 +8,10 @@
   margin-bottom: var(--y-space-32);
   filter: hue-rotate(299deg);
 }
+
+@media (max-width: 375px) {
+  .panner {
+    background-size: contain;
+    margin-top: auto;
+  }
+}

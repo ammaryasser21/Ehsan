@@ -1,34 +1,87 @@
-.products-page-section .container .bottom{
-    display: grid;
-    grid-template-columns: 1fr 3fr;
-    gap: var(--y-space-24);
+.products-page-section .container .bottom {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  gap: var(--y-space-24);
 }
 .products-page-section .container .sidebar {
-    display: flex;
-    flex-direction: column;
-    gap: var(--y-space-24);
+  display: flex;
+  flex-direction: column;
+  gap: var(--y-space-24);
+  transition: all 0.3s ease;
 }
 .products-page-section .container .sidebar .buttons {
-    display: flex;
-    flex-direction: column;
-    gap: var(--y-space-16);
-    border-radius: var(--y-space-24);
-    background-color: var(--y-color-primary);
-    padding: var(--y-space-16);
-    width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: var(--y-space-16);
+  border-radius: var(--y-space-24);
+  background-color: var(--y-color-primary);
+  padding: var(--y-space-16);
+  width: 100%;
 }
 .products-page-section .container .products-grid {
-    grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, 1fr);
 }
 .products-page-section .container .sidebar .buttons button {
-    justify-content: flex-start;}
-
+  justify-content: flex-start;
+  text-wrap: nowrap;
+}
 
 .products-page-section .container .sidebar .buttons button i {
-    width: 24px;
-    height: 24px;
-    object-fit: contain;
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
 }
 .products-page-section .container .sidebar .buttons button.active {
-    background-color: var(--y-color-secondary) !important;
+  background-color: var(--y-color-secondary) !important;
+}
+.sidebar-toggle-checkbox {
+  display: none;
+}
+
+.sidebar-toggle-label {
+  display: none;
+  cursor: pointer;
+  font-size: 24px;
+}
+
+@media (max-width: 767px) {
+  .products-page-section .container .bottom {
+    grid-template-columns: 1fr;
+    position: relative;
+  }
+
+  .sidebar-toggle-label {
+    display: block;
+  }
+
+  .products-page-section .container .sidebar {
+   height: 0;
+    position: absolute;
+    top: 40px;
+    right: 0;
+width: 0;
+    z-index: 1000;
+    opacity: 0;
+    overflow: hidden;
+    height: 0;
+
+
+
+  }
+
+  #sidebar-toggle:checked ~ .sidebar {
+    height: auto;
+    opacity: 1;
+    width: 250px;
+  }
+
+  .products-page-section .container .products-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 375px) {
+  .products-page-section .container .products-grid {
+    grid-template-columns: 1fr;
+  }
 }

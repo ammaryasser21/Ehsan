@@ -20,6 +20,7 @@
   <link rel="stylesheet" href="../../components/panner.css" />
   <link rel="stylesheet" href="../../components/products-table.css" />
   <link rel="stylesheet" href="../../components/quantity.css" />
+  <link rel="stylesheet" href="../../components/special-form.css" />
   <link rel="stylesheet" href="payment.css" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -36,63 +37,66 @@
     <section class="panner">
     </section>
     <section class="container y-u-max-w-1200 payment-section">
-      <form action="">
-        <h3>معلومات الاتصال</h3>
-        <div class="group">
-          <input type="text" placeholder="البريد الإلكتروني">
+
+
+      <div class="payment">
+        <div class="payment-option">
+
+          <label for="card" class="radio-group">
+            <div class="right">
+              <input type="radio" name="payment" id="card" class="y-toggle-input" checked>
+              الدفع عبر الإنترنت
+            </div>
+
+            <div class="imgs">
+              <img src="../../assets/master.png" alt="">
+              <img src="../../assets/visa.png" alt="">
+            </div>
+          </label>
+          <div class="y-toggle-content inputs">
+            <input type="text" inputmode="text" placeholder="  اسم حامل البطاقة">
+            <input type="number" minlength="16" maxlength="16" placeholder="رقم البطاقة">
+            <input type="month" inputmode="numeric" placeholder="تاريخ الانتهاء">
+            <input type="password" inputmode="numeric" minlength="3" maxlength="3" placeholder="CVV">
+          </div>
+        </div>
+        <div class="payment-option">
+
+          <label for="stc" class="radio-group">
+            <div class="right">
+              <input type="radio" name="payment" id="stc" class="y-toggle-input">
+              الدفع عن طريق stc-pay
+            </div>
+
+            <div class="imgs">
+              <img src="../../assets/stc-pay.png" alt="">
+            </div>
+
+          </label>
+          <div class="y-toggle-content input">
+            <input type="text" placeholder="اسم المرتبط بالبطاقة">
+          </div>
         </div>
 
-        <h3>معلومات الدفع</h3>
-        <div class="form-group">
-          <input type="text" placeholder=" الاسم الاول
-                ">
-          <input type="text" placeholder=" الاسم الثاني">
-        </div>
-
-        <input type="text" placeholder="رقم الهاتف">
-        <input type="text" placeholder="العنوان">
-        <div class="form-group">
-          <input type="text" placeholder="المحافظة">
-
-          <input type="text" placeholder="المدينة">
-        </div>
-
-        <div class="form-group">
-          <input type="text" placeholder="الرمز البريدي">
-
-
-          <input type="text" placeholder="رقم الجوال">
-        </div>
-        <h3>طريقة الدفع</h3>
-        <div class="radio-group"> <input type="radio" name="payment" id="card">
-          <label for="card"> الدفع عند الاستلام</label>
-        </div>
-        <div class="radio-group"> <input type="radio" name="payment" id="card">
-          <label for="card"> visa</label>
-        </div>
-
-        <div class="buttons-group">
-          <a href="../cart/cart.html"> <i class="fas fa-arrow-right"></i> العودة الى سلة المشتريات</a>
-          <button>اكمل الطلب</button>
-        </div>
-
-
-
-      </form>
-
+      </div>
       <div class="total">
         <h3>الإجمالى</h3>
         <div class="total-items">
-          <p>إجمالى السعر</p>
-          <p>350 <img src="../../assets/ryal.svg" alt=""></p>
+          <p>طريقة التبرع</p>
+          <p>كفالة طفل</p>
         </div>
         <div class="total-items">
-          <p>الإجمالى بعد التوصيل</p>
-          <p>400 <img src="../../assets/ryal.svg" alt=""></p>
+          <p>المبلغ</p>
+          <p>1000 <img src="../../assets/ryal.svg" alt=""></p>
         </div>
+        <button href="../payment/payment-data.html" class="btn full outline"> <i class="fa-regular fa-heart"></i>
+          تبرع</button>
+
+
       </div>
 
     </section>
+
   </main>
 
 

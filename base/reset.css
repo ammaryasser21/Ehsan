@@ -132,7 +132,6 @@ section h2 {
 @media (max-width: 768px) {
   section:first-child {
     padding-top: var(--y-space-64);
-    margin-bottom: var(--y-space-0);
   }
   main > section:first-of-type:not(.hero-section) {
     padding-top: var(--y-space-80);

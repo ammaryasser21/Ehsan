@@ -42,7 +42,7 @@
   grid-template-columns: 1fr;
   gap: var(--y-space-40);
 }
-.contact-form-section .container .right-left{
+.contact-form-section .container .right-left {
   display: grid;
   grid-template-columns: 1fr;
   gap: var(--y-space-48);
@@ -86,7 +86,8 @@
   grid-template-columns: 1fr 1fr;
   gap: var(--y-space-10);
 }
-.contact-form-section .container .right-left .right form .form-group .group {
+.contact-form-section .container .right-left .right form .form-group .group,
+.contact-form-section .container .right-left .right form > .group {
   display: flex;
   flex-direction: column;
   gap: var(--y-space-8);
@@ -169,21 +170,6 @@
 .contact-form-section .container .right-left .left {
   width: 100%;
 }
-.contact-form-section form button {
-  width: fit-content;
-  padding: var(--y-space-12) var(--y-space-32);
-  border-radius: var(--y-space-40);
-  background-color: var(--y-color-primary);
-  color: var(--y-color-bg);
-  cursor: pointer;
-  transition: all 0.3s ease;
-  font-size: var(--y-space-20);
-  font-weight: 500;
-}
-.contact-form-section form button:hover {
-  background-color: var(--y-color-secondary);
-  color: var(--y-color-bg);
-}
 
 .contact-form-section .container .right-left .left {
   width: 100%;
@@ -250,6 +236,9 @@
     grid-template-columns: 1fr;
     width: 100%;
   }
+  .contact-form-section .container .right-left:has(.left) {
+    grid-template-columns: 1fr;
+  }
 }
 @media (max-width: 480px) {
   .contact-form-section .container .right-left .right form .form-group {
@@ -257,5 +246,8 @@
   }
   .contact-form-section .container .header h2 {
     font-size: var(--y-space-28);
+  }
+  .contact-form-section .container .right-left .right form .form-group {
+    grid-template-columns: 1fr;
   }
 }

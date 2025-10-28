@@ -13,7 +13,6 @@
       document.body.style.overflow = "hidden";
     };
 
-
     document.addEventListener("click", (e) => {
       const clickedInsideAnyBtn =
         e.target &&
@@ -77,7 +76,6 @@
       return null;
     }
   };
-
 
   const wireActiveLinks = (root = document) => {
     const getCurrentMatchPath = () => {

@@ -9,19 +9,17 @@
   overflow: visible;
 }
 .product-card {
-  display: grid
-  ;
-      grid-template-rows: auto auto 50px;
-      background: var(--y-color-bg);
-      border-radius: var(--y-space-16);
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-      transition: box-shadow var(--y-transition), transform var(--y-transition);
-      border: 2px solid var(--y-color-primary);
-      transition: all 0.3s 
-  ease;
-      overflow: hidden;
-      gap: var(--y-space-14);
-      padding: var(--y-space-16);
+  display: grid;
+  grid-template-rows: auto auto 50px;
+  background: var(--y-color-bg);
+  border-radius: var(--y-space-16);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  transition: box-shadow var(--y-transition), transform var(--y-transition);
+  border: 2px solid var(--y-color-primary);
+  transition: all 0.3s ease;
+  overflow: hidden;
+  gap: var(--y-space-14);
+  padding: var(--y-space-16);
 }
 .product-card:hover {
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
@@ -59,13 +57,23 @@
   grid-template-rows: 1fr;
   grid-template-columns: 1fr 1fr;
 }
-.activities-section .container .products-grid .product-card .product-content p:not(.product-title) {
+.activities-section
+  .container
+  .products-grid
+  .product-card
+  .product-content
+  p:not(.product-title) {
   font-size: var(--y-space-24);
   font-weight: 600;
   color: var(--y-color-text);
   justify-content: flex-start;
 }
-.activities-section .container .products-grid .product-card .product-content p.product-title {
+.activities-section
+  .container
+  .products-grid
+  .product-card
+  .product-content
+  p.product-title {
   font-size: var(--y-space-20);
   font-weight: 400;
   color: var(--y-color-text);
@@ -95,19 +103,30 @@
 }
 
 @media (max-width: 767px) {
-
-
   .products-grid {
     grid-template-columns: repeat(2, 1fr);
   }
+  .activities-section .container .products-grid {
+    grid-template-columns: 1fr;
+  }
+  .product-img {
+    aspect-ratio: auto;
+  }
+  .product-card {
+    grid-template-rows: 1fr auto auto;
+  }
+  .sub-products-section .container .products-grid .product-card {
+    grid-template-columns: 1fr;
+  }
 }
-
 
 @media (max-width: 375px) {
   .products-grid {
     grid-template-columns: 1fr;
   }
 
- 
+  .activities-section .container .products-grid .product-card {
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr;
+  }
 }
-

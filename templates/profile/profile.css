@@ -270,6 +270,68 @@
   background-color: var(--y-color-bg);
   transform: translateX(26px);
 }
+.profile-section .download-content,
+.profile-section .favorite-content {
+  border: 2px solid var(--y-color-primary);
+  padding: var(--y-space-24);
+  border-radius: var(--y-space-22);
+}
+.profile-section :is(.download-content, .favorite-content) .header {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: var(--y-space-16);
+}
+.profile-section :is(.download-content, .favorite-content) .header p {
+  font-size: var(--y-space-22);
+  color: var(--y-color-primary);
+  font-weight: 500;
+  text-align: center;
+}
+.profile-section :is(.download-content, .favorite-content) .content {
+  display: flex;
+  flex-direction: column;
+}
+.profile-section :is(.download-content, .favorite-content) .content .item {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: var(--y-space-16);
+  border-top: 1px solid var(--y-color-primary);
+  padding: var(--y-space-16) 0;
+}
+.profile-section .favorite-content :is(.content .item, .header) {
+  grid-template-columns: 1fr auto;
+}
+.profile-section :is(.download-content, .favorite-content) .content .item p {
+  font-size: var(--y-space-18);
+  color: var(--y-color-text);
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--y-space-8);
+}
+.profile-section .favorite-content :is(p) {
+  justify-content: start !important;
+  text-align: justify !important;
+}
+.profile-section .favorite-content .content .item button {
+  cursor: pointer;
+  color: var(--y-color-bg);
+  background-color: #ca3030;
+
+  border-radius: var(--y-space-552);
+  width: 38px;
+  height: fit-content;
+  aspect-ratio: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+.profile-section .favorite-content .content .item button:hover {
+  background-color: var(--y-color-secondary);
+  color: var(--y-color-bg);
+}
 
 @media (max-width: 768px) {
   .profile-section .container .bottom {
@@ -300,5 +362,20 @@
   }
   .profile-section .settings-div {
     gap: var(--y-space-46);
+  }
+  .profile-section :is(.download-content, .favorite-content) .header p {
+    font-size: var(--y-space-18);
+  }
+  .profile-section :is(.download-content, .favorite-content) .content .item p {
+    font-size: var(--y-space-16);
+  }
+}
+
+@media (max-width: 375px) {
+  .profile-section :is(.download-content, .favorite-content) .header p {
+    font-size: 4vw;
+  }
+  .profile-section :is(.download-content, .favorite-content) .content .item p {
+    font-size: 4vw;
   }
 }

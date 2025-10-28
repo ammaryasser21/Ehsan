@@ -88,11 +88,9 @@ header .user-nav a {
   color: var(--y-color-muted);
   line-height: var(--y-space-24);
   padding: var(--y-space-8) var(--y-space-16);
-  transition: color 0.3s 
-ease;
+  transition: color 0.3s ease;
   gap: var(--y-space-8);
-  display: flex
-;
+  display: flex;
   align-items: center;
 }
 header .user-nav img {
@@ -114,10 +112,8 @@ header .user-nav i {
   line-height: var(--y-space-24);
   padding: 3px;
   font-weight: 600;
-  transition: color 0.3s 
-ease;
-  display: flex
-;
+  transition: color 0.3s ease;
+  display: flex;
   align-items: center;
 }
 
@@ -294,7 +290,9 @@ ul.mobile-menu li button {
   align-items: center;
   gap: var(--y-space-10);
   justify-content: start;
-  font-size: var(--y-space-42);
+  font-size: var(--y-space-24);
+  border-bottom: 2px solid var(--y-color-secondary);
+  padding-bottom: var(--y-space-16);
 }
 header .container.bottom .desktop-menu li a,
 header .container.bottom .desktop-menu li button {

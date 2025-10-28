@@ -11,11 +11,10 @@
   justify-content: center;
   align-items: center;
 }
-.auth-section .container.right-left:not(:has(.left)){
-display: flex;
-justify-content: center;
-align-items: center;
-  
+.auth-section .container.right-left:not(:has(.left)) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .auth-section .container.right-left:has(.left) {
   display: grid;
@@ -163,6 +162,9 @@ align-items: center;
   }
   .auth-section .container .left {
     width: 100%;
+  }
+  .auth-section {
+    margin-top: var(--y-space-96);
   }
 
   .auth-section .container .left img {

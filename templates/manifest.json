@@ -1,13 +1,13 @@
 {
-  "name": "ريدز - Reads",
-  "short_name": "Reads",
-  "description": "ريدز منصة عربية لقراءة وشراء الكتب الإلكترونية والورقية، توفر أفضل الإصدارات الجديدة في مكتبة الكتب والروايات العربية والأجنبية والعالمية.",
+  "name": "احسان - Ehsaan",
+  "short_name": "Ehsaan",
+  "description": "احسان مؤسسة رائدة كمثال عالمي للوصول إلي تنمية مجتمع تكافلي ينمو ذاتيا",
   "dir": "rtl",
   "lang": "ar",
   "display": "standalone",
   "start_url": "../layout/index.html",
   "scope": "../",
-  "background_color": "#F3F1F1",
+  "background_color": "#FFFFFF",
   "theme_color": "#1a47a1",
   "icons": [
     {
@@ -25,10 +25,10 @@
   ],
   "prefer_related_applications": false,
   "categories": [
-    "الكتب",
-    "القراءة",
-    "الروايات",
-    "المكتبات الإلكترونية",
-    "الأدب"
+ "الخير",
+ "التنمية",
+ "التكافل",
+ "التعاون",
+ "المساعدة"
   ]
 }

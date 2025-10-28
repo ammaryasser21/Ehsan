@@ -1,4 +1,4 @@
-.btn{
+.btn {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -13,7 +13,6 @@
   font-weight: 500;
   width: fit-content;
   text-align: center;
-
 }
 .btn:hover {
   background-color: var(--y-color-secondary) !important;
@@ -23,37 +22,37 @@
   background-color: var(--y-color-secondary) !important;
   color: var(--y-color-bg) !important;
 }
-.btn.rounded{
+.btn.rounded {
   border-radius: var(--y-space-40);
 }
-.btn.full{
+.btn.full {
   width: 100%;
 }
-.btn.outline{
-  background-color: transparent !important;
+.btn.outline {
+  background-color: var(--y-color-bg) !important;
   color: var(--y-color-primary) !important;
   border: 1px solid var(--y-color-primary) !important;
 }
-.btn.outline:hover{
-  background-color: var(--y-color-primary) !important;
+.btn.outline:hover {
+  background-color: var(--y-color-secondary) !important;
   color: var(--y-color-bg) !important;
 }
-.btn.outline:active{
+.btn.outline:active {
   background-color: var(--y-color-secondary) !important;
   color: var(--y-color-bg) !important;
 }
 
-.primary-text{
+.primary-text {
   font-size: var(--y-space-20);
   font-weight: 500;
   color: var(--y-color-primary);
 }
-.normal-text{
+.normal-text {
   font-size: var(--y-space-16);
   font-weight: 400;
   color: var(--y-color-text);
 }
-.secondary-text{
+.secondary-text {
   font-size: var(--y-space-16);
   font-weight: 400;
   color: var(--y-color-secondary);

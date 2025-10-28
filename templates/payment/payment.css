@@ -1,8 +1,95 @@
+.dontate-section .header i {
+  font-size: var(--y-space-22);
+  color: var(--y-color-bg);
+  background-color: var(--y-color-primary);
+  padding: var(--y-space-12);
+  border-radius: var(--y-space-32);
+}
+.dontate-list {
+  display: flex;
+  align-items: center;
+  gap: var(--y-space-18);
+  font-size: var(--y-space-20);
+  font-weight: 500;
+  color: var(--y-color-text);
+  cursor: pointer;
+}
+.dontate-group {
+  position: relative;
+}
+.dontate-list ~ .items {
+  height: 0;
+  padding: 0;
+  overflow: hidden;
+
+  flex-direction: column;
+  gap: var(--y-space-16);
+  align-items: start;
+  justify-content: start;
+  background-color: var(--y-color-primary);
+
+  border-radius: var(--y-space-12);
+  color: var(--y-color-bg);
+
+  width: 0;
+  top: 37px;
+  position: absolute;
+  transition: all 0.3s ease-in-out;
+}
+.dontate-list ~ .items button {
+  width: 100%;
+  border-radius: var(--y-space-12);
+  border: 1px solid var(--y-color-primary);
+  color: var(--y-color-bg);
+  width: fit-content;
+}
+.dontate-list img {
+  width: var(--y-space-20);
+  height: var(--y-space-20);
+  transform: rotate(270deg);
+  transition: 0.3s;
+}
+.donate-toggle-checkbox {
+  display: none;
+}
+.donate-toggle-checkbox:checked ~ .items {
+  display: flex;
+  padding: var(--y-space-12) var(--y-space-24);
+  height: auto;
+  width: fit-content;
+}
+.donate-toggle-checkbox:checked + .dontate-list img {
+  transform: rotate(90deg);
+}
+
 .payment-section {
   display: grid;
   grid-template-columns: 2fr 1fr;
-  gap: var(--y-space-24);
   align-items: start;
+  gap: var(--y-space-16);
+}
+
+.payment-section form {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--y-space-16);
+}
+
+.payment-section :is(input, select, textarea) {
+  width: auto;
+  padding: var(--y-space-12) var(--y-space-12);
+  border: 1px solid var(--y-color-primary);
+  border-radius: var(--y-space-14);
+  color: var(--y-color-text);
+  transition: border-color var(--y-transition), box-shadow var(--y-transition);
+  margin-bottom: var(--y-space-12);
+  margin-inline: var(--y-space-4);
+}
+
+.payment-section :is(input, select, textarea):focus {
+  box-shadow: 0 0 0 3px
+    color-mix(in oklab, var(--y-color-primary) 20%, transparent);
+  outline: none;
 }
 
 .radio-group {
@@ -11,187 +98,202 @@
   gap: var(--y-space-10);
   width: max-content;
   padding-inline: var(--y-space-42);
-  background-color: var(--y-color-primary-light);
   padding: var(--y-space-10);
-  border: 2px solid var(--y-color-border-primary);
+  border: 2px solid var(--y-color-border);
   border-radius: var(--y-space-48);
-  color: var(--y-color-border-primary);
+  color: var(--y-color-text);
   padding-inline: var(--y-space-6);
   padding-left: var(--y-space-32);
-  cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .radio-group:has(input[type="radio"]:checked) {
-  background-color: var(--y-color-primary);
-  border: var(--y-color-primary);
+  background-color: var(--y-color-button);
   border-radius: var(--y-space-48);
-  color: var(--y-color-bg);
-}
-.radio-group:has(input[type="radio"]:checked) label {
-  color: var(--y-color-bg);
+  color: var(--y-color-text);
+  border: 2px solid var(--y-color-button);
 }
 
-/* .payment-section form input[type="radio" i]:checked {
-  outline: 5px solid var(--y-color-fg);
-  background-color: var(--y-color-text);
-} */
+input[type="radio" i]:checked {
+  outline: 3px solid var(--y-color-primary);
+  appearance: none;
+  border: 2px solid var(--y-color-bg);
+  padding: var(--y-space-8);
+}
 
-.payment-section .total {
+input[type="radio" i] {
+  cursor: pointer;
+  outline: 3px solid var(--y-color-primary);
+  appearance: none;
+  border: 2px solid var(--y-color-bg);
+  padding: var(--y-space-8);
+  background-color: var(--y-color-bg);
+  transition: all 0.3s ease;
+}
+
+input[type="checkbox" i] {
+  cursor: pointer;
+}
+
+.payment-option {
+  position: relative;
+}
+
+form > .payment-option {
+  display: flex;
+  align-items: stretch;
+  gap: var(--y-space-8);
+}
+.note-option {
+  flex-direction: column;
+  align-items: flex-start;
+}
+.imgs {
+  display: flex;
+  align-items: center;
+  gap: var(--y-space-8);
+  justify-content: flex-end;
+}
+.imgs img {
+  width: var(--y-space-50);
+  height: var(--y-space-50);
+  object-fit: contain;
+}
+.custom-input {
+  display: inline-block;
+  width: var(--y-space-14);
+  height: var(--y-space-14);
+  border: 2px solid var(--y-color-border);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background-color: var(--y-color-fg);
+}
+
+.y-toggle-input[type="radio"] {
+  border-radius: 50%;
+}
+.y-toggle-input[type="checkbox"] {
+  border-radius: var(--y-space-6);
+  padding: var(--y-space-14);
+  appearance: none;
+  background-color: var(--y-color-bg);
+  border: 2px solid var(--y-color-primary);
+  outline: 2px solid var(--y-color-primary);
+}
+.y-toggle-input:checked {
+  background-color: var(--y-color-primary);
+  border-color: var(--y-color-primary);
+}
+.y-toggle-input[type="checkbox"]:checked {
+  background-color: var(--y-color-primary);
+  border-color: var(--y-color-bg);
+  outline: 2px solid var(--y-color-primary);
+}
+.y-toggle-input[type="checkbox"]:before {
+  content: "\f00c";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  font-size: var(--y-space-12);
+  color: var(--y-color-white);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: block;
+}
+.y-toggle-input {
+  background-color: var(--y-color-grey);
+  border-color: var(--y-color-primary);
+}
+
+.y-toggle-content {
+  display: grid;
+  max-height: 0;
+  padding-top: var(--y-space-16);
+  overflow: hidden;
+  transition: max-height 400ms ease-in-out;
+  gap: var(--y-space-12);
+}
+
+.payment-option:has(.y-toggle-input:checked) .y-toggle-content {
+  max-height: 20rem;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--y-space-16);
+}
+.radio-group:not(:has(input[type="checkbox"])) {
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--y-space-16);
+  width: 100%;
+  padding-inline: var(--y-space-42);
+  padding: var(--y-space-10);
+  border: none;
+  border-radius: var(--y-space-48);
+  color: var(--y-color-text);
+  padding-inline: var(--y-space-6);
+  padding-left: var(--y-space-32);
+  transition: all 0.3s ease;
+}
+
+.payment {
+  padding: var(--y-space-16);
+  border: 2px solid var(--y-color-primary);
+  border-radius: var(--y-space-16);
+}
+
+.payment-option .radio-group .right {
+  display: flex;
+  align-items: center;
+  gap: var(--y-space-4);
+}
+
+.total {
   display: flex;
   flex-direction: column;
   gap: var(--y-space-16);
-  color: var(--y-color-text);
   background-color: var(--y-color-primary);
-  padding: var(--y-space-26);
-  border-radius: var(--y-space-22);
-}
-.payment-section .total h3 {
-  font-size: var(--y-space-24);
-  font-weight: 700;
+  padding: var(--y-space-16);
+  border-radius: var(--y-space-16);
   color: var(--y-color-bg);
 }
-.payment-section .total img {
-  width: 24px;
-  height: 24px;
-  mix-blend-mode: plus-lighter;
-  filter: brightness(7.5);
-}
-.payment-section .total p {
+.total-items {
   display: flex;
-  align-items: center;
-  gap: var(--y-space-8);
-  font-size: var(--y-space-20);
-  font-weight: 600;
-  color: var(--y-color-bg);
-}
-
-.payment-section form {
-  display: flex;
-  flex-direction: column;
-  gap: var(--y-space-26);
-  border: 2px solid var(--y-color-primary);
-  padding: var(--y-space-26);
-  border-radius: var(--y-space-22);
-}
-.payment-section form .form-group {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: var(--y-space-10);
-}
-.payment-section form .form-group .group {
-  display: flex;
-  flex-direction: column;
-  gap: var(--y-space-8);
-}
-.payment-section form label {
-  font-size: var(--y-space-20);
-  font-weight: 500;
-  color: var(--y-color-text);
-}
-.payment-section form input:not([type="file"]):not([type="radio"]),
-.payment-section form textarea {
-  width: 100%;
-  padding: var(--y-space-12) var(--y-space-12);
-  border: 1px solid var(--y-color-primary);
-  border-radius: var(--y-space-40);
-  background: transparent;
-}
-.payment-section form input[type="radio"] {
-  background-color: var(--y-color-primary);
-}
-.payment-section form input[type="radio" i] {
-  accent-color: var(--y-color-primary);
-  border: 2px solid var(--y-color-border-primary);
-  outline: var(--y-color-primary);
-  appearance: none;
-  width: 14px;
-  height: 14px;
-  background-color: var(--y-color-bg);
-  border-radius: 7px;
-  cursor: pointer;
-}
-.payment-section form input[type="radio" i]:checked {
-  background-color: var(--y-color-border-primary);
-  border: 2px solid var(--y-color-bg);
-}
-
-.payment-section .total .total-items {
-  display: flex;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
+  gap: var(--y-space-16);
 }
-.payment-section .total .total-items p:first-child {
-  font-weight: 700;
-  font-size: var(--y-space-16);
-}
-.payment-section .total .total-items p:last-child {
-  font-size: var(--y-space-16);
-  font-weight: 300;
-}
-.payment-section form button {
-  width: fit-content;
-  padding: var(--y-space-12) var(--y-space-32);
-  border-radius: var(--y-space-40);
-  background-color: var(--y-color-primary);
-  color: var(--y-color-bg);
-  cursor: pointer;
-  transition: all 0.3s ease;
+.total-items p {
   font-size: var(--y-space-20);
   font-weight: 500;
-}
-.payment-section form button:hover {
-  background-color: var(--y-color-secondary);
-  color: var(--y-color-bg);
-}
-
-.payment-section form .buttons-group {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: var(--y-space-10);
-}
-
-.payment-section form .buttons-group a {
+  color: #ffffff;
   display: flex;
-  justify-content: center;
   align-items: center;
   gap: var(--y-space-8);
-  border: 1px solid var(--y-color-primary);
-  border-radius: var(--y-space-96);
-  transition: all 0.3s ease;
+}
+.total-items img {
+  width: var(--y-space-20);
+  height: var(--y-space-20);
+  filter: brightness(0.1) invert(1);
 }
 
-.payment-section form .buttons-group a:hover {
-  background-color: var(--y-color-primary);
-  color: var(--y-color-bg);
+img[src="../../assets/stc-pay.png"] {
+  filter: hue-rotate(180deg);
 }
-
-.payment-section form .buttons-group button {
-  width: 100%;
-  justify-content: center;
+img[src="../../assets/master.png"] {
+  filter: hue-rotate(85deg);
 }
-
-@media (max-width: 768px) {
+img[src="../../assets/visa.png"] {
+  filter: hue-rotate(209deg);
+}
+@media (max-width: 767px) {
   .payment-section {
     grid-template-columns: 1fr;
   }
-  .payment-section form button {
-    width: 100%;
-    justify-content: center;
-  }
-  .payment-section form input:not([type="radio"]) {
-    width: 100% !important;
-  }
-  .radio-group {
-    width: 100%;
-  }
-  .payment-section form .buttons-group {
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr;
-  }
-}
-@media (max-width: 480px) {
-  .payment-section form .form-group {
-    grid-template-columns: 1fr;
+  .payment {
+    order: 2;
   }
 }
