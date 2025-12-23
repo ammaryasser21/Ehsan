@@ -5,6 +5,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Ehsaan</title>
+  <link rel="icon" href="../../assets/icon.png" />
   <link rel="manifest" href="../manifest.json" />
 
   <link rel="stylesheet" href="../../base/reset.css" />
@@ -22,6 +23,7 @@
   <link rel="stylesheet" href="../../components/quantity.css" />
   <link rel="stylesheet" href="../../components/special-form.css" />
   <link rel="stylesheet" href="payment.css" />
+  <link rel="stylesheet" href="../../components/popup.css" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -49,8 +51,7 @@
             </div>
 
             <div class="imgs">
-              <img src="../../assets/master.png" alt="">
-              <img src="../../assets/visa.png" alt="">
+              <img src="../../assets/payment-methods.png" alt="طرق الدفع المتاحة">
             </div>
           </label>
           <div class="y-toggle-content inputs">
@@ -69,13 +70,42 @@
             </div>
 
             <div class="imgs">
-              <img src="../../assets/stc-pay.png" alt="">
+              <img src="../../assets/stc-pay.png" alt="شعار stc pay">
             </div>
 
           </label>
           <div class="y-toggle-content input">
             <input type="text" placeholder="اسم المرتبط بالبطاقة">
           </div>
+        </div>
+        <div class="payment-option">
+
+          <label for="apple-pay" class="radio-group">
+            <div class="right">
+              <input type="radio" name="payment" id="apple-pay" class="y-toggle-input">
+              <img src="../../assets/apple-pay.png" alt="شعار Apple Pay">
+            </div>
+
+          </label>
+        </div>
+        <div class="payment-option">
+
+          <label for="taby-pay" class="radio-group">
+            <div class="right">
+              <input type="radio" name="payment" id="taby-pay" class="y-toggle-input">
+              <img src="../../assets/taby-pay.png" alt="شعار تابي للمدفوعات">
+            </div>
+
+          </label>
+        </div>
+        <div class="payment-option">
+          <label for="tamara-pay" class="radio-group">
+            <div class="right">
+              <input type="radio" name="payment" id="tamara-pay" class="y-toggle-input">
+              <img src="../../assets/tmara-pay.png" alt="شعار تمارا للدفع">
+            </div>
+
+          </label>
         </div>
 
       </div>
@@ -87,7 +117,7 @@
         </div>
         <div class="total-items">
           <p>المبلغ</p>
-          <p>1000 <img src="../../assets/ryal.svg" alt=""></p>
+          <p>1000 <img src="../../assets/ryal.svg" alt="ريال سعودي"></p>
         </div>
         <button href="../payment/payment-data.html" class="btn full outline"> <i class="fa-regular fa-heart"></i>
           تبرع</button>
@@ -102,7 +132,19 @@
 
   <y-footer></y-footer>
 
+  <div class="popup-overlay" id="paymentSuccessPopup">
+    <div class="popup-content">
+      <i class="fa-solid fa-circle-check success-icon"></i>
+      <h2>تم بنجاح</h2>
+      <a href="../layout/index.html" class="btn-home">
+        العودة إلى الرئيسية
+        <i class="fa-solid fa-arrow-left"></i>
+      </a>
+    </div>
+  </div>
+
   <script src="../../js/y-app-init.js"></script>
+  <script src="../../js/popup.js"></script>
 </body>
 
 </html>

@@ -20,6 +20,7 @@
   <link rel="stylesheet" href="../../components/footer.css" />
   <link rel="stylesheet" href="../../components/panner.css" />
   <link rel="stylesheet" href="../../components/special-form.css" />
+  <link rel="stylesheet" href="../../components/popup.css" />
 </head>
 
 <body>
@@ -30,7 +31,7 @@
     <section class="contact-form-section">
       <div class="container y-u-max-w-1200">
         <div class="header">
-          <img src="../../assets/email-white.svg" alt="">
+          <img src="../../assets/email-white.svg" alt="أيقونة بريد إلكتروني">
           <h2> طلب مساعدة</h2>
         </div>
         <div class="right-left">
@@ -86,7 +87,20 @@
   </main>
 
   <y-footer></y-footer>
+
+  <div class="popup-overlay" id="paymentSuccessPopup">
+    <div class="popup-content">
+      <i class="fa-solid fa-circle-check success-icon"></i>
+      <h2>تم إرسال الطلب</h2>
+      <a href="../layout/index.html" class="btn-home">
+        العودة إلى الرئيسية
+        <i class="fa-solid fa-arrow-left"></i>
+      </a>
+    </div>
+  </div>
+
   <script src="../../js/y-app-init.js"></script>
+  <script src="../../js/popup.js"></script>
 </body>
 
 </html>

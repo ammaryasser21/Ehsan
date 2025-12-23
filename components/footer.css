@@ -43,8 +43,10 @@ footer ul li a {
   font-size: var(--y-space-22);
 }
 footer .imgs-row img {
+  height: 80px;
   object-fit: contain;
   filter: contrast(0) saturate(9) brightness(2.5);
+  aspect-ratio: 1;
 }
 footer .imgs-row {
   display: flex;

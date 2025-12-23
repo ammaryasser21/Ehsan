@@ -155,8 +155,7 @@ form > .payment-option {
   justify-content: flex-end;
 }
 .imgs img {
-  width: var(--y-space-50);
-  height: var(--y-space-50);
+  height: var(--y-space-32);
   object-fit: contain;
 }
 .custom-input {
@@ -250,6 +249,10 @@ form > .payment-option {
   align-items: center;
   gap: var(--y-space-4);
 }
+.radio-group img {
+  height: var(--y-space-50);
+  object-fit: contain;
+}
 
 .total {
   display: flex;
@@ -280,15 +283,7 @@ form > .payment-option {
   filter: brightness(0.1) invert(1);
 }
 
-img[src="../../assets/stc-pay.png"] {
-  filter: hue-rotate(180deg);
-}
-img[src="../../assets/master.png"] {
-  filter: hue-rotate(85deg);
-}
-img[src="../../assets/visa.png"] {
-  filter: hue-rotate(209deg);
-}
+
 @media (max-width: 767px) {
   .payment-section {
     grid-template-columns: 1fr;
