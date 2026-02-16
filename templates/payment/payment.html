@@ -24,6 +24,7 @@
   <link rel="stylesheet" href="../../components/special-form.css" />
   <link rel="stylesheet" href="payment.css" />
   <link rel="stylesheet" href="../../components/popup.css" />
+  <link rel="stylesheet" href="../../components/breadcrumbs.css" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -38,92 +39,76 @@
   <main>
     <section class="panner">
     </section>
-    <section class="container y-u-max-w-1200 payment-section">
+    <section class="container y-u-max-w-1200">
+      <div class="breadcrumbs">
+        <a href="../layout/index.html">الرئيسية</a>
+        <p class="active"> الدفع</p>
+      </div>
 
-
-      <div class="payment">
-        <div class="payment-option">
-
-          <label for="card" class="radio-group">
-            <div class="right">
-              <input type="radio" name="payment" id="card" class="y-toggle-input" checked>
-              الدفع عبر الإنترنت
-            </div>
-
-            <div class="imgs">
-              <img src="../../assets/payment-methods.png" alt="طرق الدفع المتاحة">
-            </div>
-          </label>
-          <div class="y-toggle-content inputs">
-            <input type="text" inputmode="text" placeholder="  اسم حامل البطاقة">
-            <input type="number" minlength="16" maxlength="16" placeholder="رقم البطاقة">
-            <input type="month" inputmode="numeric" placeholder="تاريخ الانتهاء">
-            <input type="password" inputmode="numeric" minlength="3" maxlength="3" placeholder="CVV">
+<form id="payment-process-form" class="payment-section">
+  <div class="payment">
+    <div class="payment-option">
+      <label for="card" class="radio-group">
+        <div class="right">
+          <input type="radio" name="payment" id="card" value="card" class="y-toggle-input" checked>
+          الدفع عبر الإنترنت
+        </div>
+        <div class="imgs">
+          <img src="../../assets/payment-methods.png" alt="طرق الدفع المتاحة">
+        </div>
+      </label>
+      <div class="y-toggle-content inputs">
+        <div class="group">
+          <input type="text" id="card-holder" inputmode="text" placeholder="اسم حامل البطاقة">
+        </div>
+        <div class="group">
+          <input type="text" id="card-number" inputmode="numeric" maxlength="19" placeholder="رقم البطاقة" dir="ltr">
+        </div>
+        <div class="y-u-flex y-u-gap-8">
+          <div class="group" style="flex:1 ">
+            <input type="month" id="expiry-date" placeholder="تاريخ الانتهاء">
+          </div>
+          <div class="group" style="flex:1">
+            <input type="password" id="cvv" inputmode="numeric" maxlength="4" placeholder="CVV">
           </div>
         </div>
-        <div class="payment-option">
-
-          <label for="stc" class="radio-group">
-            <div class="right">
-              <input type="radio" name="payment" id="stc" class="y-toggle-input">
-              الدفع عن طريق stc-pay
-            </div>
-
-            <div class="imgs">
-              <img src="../../assets/stc-pay.png" alt="شعار stc pay">
-            </div>
-
-          </label>
-          <div class="y-toggle-content input">
-            <input type="text" placeholder="اسم المرتبط بالبطاقة">
-          </div>
-        </div>
-        <div class="payment-option">
-
-          <label for="apple-pay" class="radio-group">
-            <div class="right">
-              <input type="radio" name="payment" id="apple-pay" class="y-toggle-input">
-              <img src="../../assets/apple-pay.png" alt="شعار Apple Pay">
-            </div>
-
-          </label>
-        </div>
-        <div class="payment-option">
-
-          <label for="taby-pay" class="radio-group">
-            <div class="right">
-              <input type="radio" name="payment" id="taby-pay" class="y-toggle-input">
-              <img src="../../assets/taby-pay.png" alt="شعار تابي للمدفوعات">
-            </div>
-
-          </label>
-        </div>
-        <div class="payment-option">
-          <label for="tamara-pay" class="radio-group">
-            <div class="right">
-              <input type="radio" name="payment" id="tamara-pay" class="y-toggle-input">
-              <img src="../../assets/tmara-pay.png" alt="شعار تمارا للدفع">
-            </div>
-
-          </label>
-        </div>
-
       </div>
-      <div class="total">
-        <h3>الإجمالى</h3>
-        <div class="total-items">
-          <p>طريقة التبرع</p>
-          <p>كفالة طفل</p>
+    </div>
+    <div class="payment-option">
+      <label for="agent" class="radio-group">
+        <div class="right">
+          <input type="radio" name="payment" id="agent" value="agent" class="y-toggle-input">
+          إرسال مندوب
         </div>
-        <div class="total-items">
-          <p>المبلغ</p>
-          <p>1000 <img src="../../assets/ryal.svg" alt="ريال سعودي"></p>
+      </label>
+    </div>
+    <div class="payment-option">
+      <label for="bank" class="radio-group">
+        <div class="right">
+          <input type="radio" name="payment" id="bank" value="bank" class="y-toggle-input">
+          تحويل بنكي مباشر
         </div>
-        <button href="../payment/payment-data.html" class="btn full outline"> <i class="fa-regular fa-heart"></i>
-          تبرع</button>
+      </label>
+    </div>
+  </div>
+  <div class="total">
+    <div class="total-items">
+      <p>برنامج التبرع</p>
+      <p>كفالة طفل</p>
+    </div>
+    <div class="total-items">
+      <p>طريقة الدفع</p>
+      <p>الدفع عبر الإنترنت</p>
+    </div>
+    <div class="total-items">
+      <p>المبلغ</p>
+      <p>1000 <img src="../../assets/ryal.svg" alt="ريال سعودي"></p>
+    </div>
+    <button type="submit" class="btn full outline"> <i class="fa-regular fa-heart"></i>
+      تبرع</button>
+  </div>
+</form>
 
-
-      </div>
 
     </section>
 
@@ -143,8 +128,9 @@
     </div>
   </div>
 
+  <script src="https://unpkg.com/just-validate@latest/dist/just-validate.production.min.js"></script>
   <script src="../../js/y-app-init.js"></script>
-  <script src="../../js/popup.js"></script>
+  <script src="../../js/form-validation.js"></script>
 </body>
 
 </html>

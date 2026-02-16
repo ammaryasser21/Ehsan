@@ -20,6 +20,8 @@
   <link rel="stylesheet" href="../../components/footer.css" />
   <link rel="stylesheet" href="../../components/panner.css" />
   <link rel="stylesheet" href="../../components/special-form.css" />
+  <link rel="stylesheet" href="../../components/filters.css" />
+  <link rel="stylesheet" href="../../components/breadcrumbs.css" />
   <link rel="stylesheet" href="payment.css" />
 </head>
 
@@ -30,6 +32,10 @@
     </section>
     <section class="contact-form-section dontate-section">
       <div class="container y-u-max-w-1200">
+        <div class="breadcrumbs">
+          <a href="../layout/index.html">الرئيسية</a>
+          <p class="active"> برنامج التبرع</p>
+        </div>
         <div class="header">
           <i class="fas fa-heart"></i>
           <h2> برنامج التبرع</h2>
@@ -37,31 +43,22 @@
         <div class="right-left">
           <div class="right">
 
-            <form action="">
+            <form action="" id="donation-data-form">
 
-              <div class="group dontate-group">
-                <input type="checkbox" id="donate-toggle" class="donate-toggle-checkbox">
-                <label for="donate-toggle" class="dontate-list">برنامج التبرع اختر <img
-                    src="../../assets/left-arrow.svg" alt="أيقونة سهم لليسار"></label>
-                <div class="items">
-                  <button>
-                    كفالة
-                  </button>
-                  <button>
-                    التعليم
-                  </button>
-                  <button>
-                    الصحة
-                  </button>
-                  <button>
-                    الإغاثة
-                  </button>
-                  <button>
-                    البناء
-                  </button>
+              <div class="custom-dropdown">
+                <div class="dropdown-trigger btn-white">
+                    <span class="dropdown-current"> اختر البرنامج </span>
+                    <i class="fa-solid fa-chevron-down dropdown-arrow"></i>
                 </div>
+                <ul class="dropdown-options">
+                    <li> كفالة </li>
+                    <li> التعليم </li>
+                    <li> الصحة </li>
+                    <li> الإغاثة </li>
+                    <li> البناء </li>
+                </ul>
+            </div>
 
-              </div>
               <div class="group">
                 <label for="name">الاسم </label>
                 <input type="text" id="name" name="name" placeholder="اكتب الاسم بالكامل">
@@ -71,16 +68,20 @@
                 <input type="email" id="email" name="email" placeholder="example@gmail.com">
               </div>
               <div class="group">
-                <label for="number"> رقم الهاتف</label>
-                <input type="number" id="number" name="number" placeholder="اكتب رقم الهاتف بدون رموز">
+                <label for="phone"> رقم الهاتف</label>
+                <input type="tel" id="phone" name="phone" placeholder="05xxxxxxxx">
               </div>
               <div class="group">
-                <label for="number"> المبلغ</label>
-                <input type="number" id="number" name="number" placeholder="اكتب المبلغ">
+                <label for="amount"> المبلغ</label>
+                <input type="number" id="amount" name="amount" placeholder="اكتب المبلغ">
               </div>
 
 
-              <a href="../payment/payment.html" class="btn rounded"> <i class="fas fa-arrow-right"></i> اكمل التبرع</a>
+              <div class="y-u-flex y-u-items-center y-u-gap-16">
+                <a href="../activities/activities.html" class="btn rounded outline"> <i class="fas fa-arrow-right"></i> تبرع اخر</a>
+                <button type="submit" class="btn rounded"> <i class="fa-regular fa-heart"></i> اكمل التبرع</button>
+              </div>
+
             </form>
 
           </div>
@@ -95,7 +96,10 @@
   </main>
 
   <y-footer></y-footer>
+  <script src="https://unpkg.com/just-validate@latest/dist/just-validate.production.min.js"></script>
   <script src="../../js/y-app-init.js"></script>
+  <script src="../../js/dropdown.js"></script>
+  <script src="../../js/form-validation.js"></script>
 </body>
 
 </html>

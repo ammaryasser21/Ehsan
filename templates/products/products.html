@@ -20,6 +20,7 @@
   <link rel="stylesheet" href="../../components/footer.css" />
   <link rel="stylesheet" href="../../components/panner.css" />
   <link rel="stylesheet" href="../../components/products.css" />
+  <link rel="stylesheet" href="../../components/breadcrumbs.css" />
   <link rel="stylesheet" href="./sub-products.css" />
 </head>
 
@@ -30,7 +31,11 @@
     </section>
     <section class="products-section products-page-section">
       <div class="container y-u-max-w-1200">
-        <h2>التصنيفات</h2>
+        <div class="breadcrumbs">
+          <a href="../layout/index.html">الرئيسية</a>
+          <p class="active"> البرامج</p>
+        </div>
+        <h2>البرامج</h2>
         <div class="bottom">
           <input type="checkbox" id="sidebar-toggle" class="sidebar-toggle-checkbox">
           <label for="sidebar-toggle" class="sidebar-toggle-label">
@@ -39,13 +44,26 @@
           <div class="sidebar">
 
             <div class="buttons">
-              <button class="btn full active"><i class="fas fa-globe"></i> الكل </button>
-              <button class="btn full"><i class="fas fa-heartbeat"></i> الرعاية الصحية </button>
-              <button class="btn full"><i class="fas fa-graduation-cap"></i> التعليم </button>
-              <button class="btn full"><i class="fas fa-building"></i> البناء </button>
-              <button class="btn full"><i class="fas fa-ambulance"></i> الإغاثة </button>
-              <button class="btn full"><i class="fas fa-hand-holding-usd"></i> الكفالة </button>
-              <button class="btn full"><i class="fas fa-credit-card"></i> سداد الديون </button>
+              <input type="radio" name="category" id="cat-all" value="all" checked hidden>
+              <label for="cat-all" class="btn full"><i class="fas fa-globe"></i> الكل </label>
+
+              <input type="radio" name="category" id="cat-healthcare" value="healthcare" hidden>
+              <label for="cat-healthcare" class="btn full"><i class="fas fa-heartbeat"></i> الرعاية الصحية </label>
+
+              <input type="radio" name="category" id="cat-education" value="education" hidden>
+              <label for="cat-education" class="btn full"><i class="fas fa-graduation-cap"></i> التعليم </label>
+
+              <input type="radio" name="category" id="cat-construction" value="construction" hidden>
+              <label for="cat-construction" class="btn full"><i class="fas fa-building"></i> البناء </label>
+
+              <input type="radio" name="category" id="cat-relief" value="relief" hidden>
+              <label for="cat-relief" class="btn full"><i class="fas fa-ambulance"></i> الإغاثة </label>
+
+              <input type="radio" name="category" id="cat-sponsorship" value="sponsorship" hidden>
+              <label for="cat-sponsorship" class="btn full"><i class="fas fa-hand-holding-usd"></i> الكفالة </label>
+
+              <input type="radio" name="category" id="cat-debt" value="debt" hidden>
+              <label for="cat-debt" class="btn full"><i class="fas fa-credit-card"></i> سداد الديون </label>
             </div>
           </div>
 

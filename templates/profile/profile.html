@@ -17,6 +17,7 @@
   <link rel="stylesheet" href="../../components/panner.css" />
   <link rel="stylesheet" href="../../components/products.css" />
   <link rel="stylesheet" href="../../components/buttons.css" />
+  <link rel="stylesheet" href="../../components/breadcrumbs.css" />
 
   <link rel="stylesheet" href="./profile.css" />
 
@@ -32,10 +33,15 @@
 
   <main>
     <section class="panner">
+
     </section>
 
     <section class="profile-section">
       <div class="container y-u-max-w-1200">
+        <div class="breadcrumbs">
+          <a href="../layout/index.html">الرئيسية</a>
+          <p href="#" class="active"> الحساب</p>
+        </div>
         <div class="bottom">
           <div class="sidbar">
 
@@ -79,6 +85,10 @@
                     <input type="tel" id="phone" name="phone">
                   </div>
                 </div>
+                <div class="group">
+                  <label for="name">العنوان</label>
+                  <input type="text" id="address" name="address">
+                </div>
 
                 <button type="submit"> حفظ</button>
 
@@ -86,19 +96,6 @@
 
               </form>
               <div class="settings-div">
-                <div class="card">
-                  <div class="header">
-                    <i class="fas fa-bell"></i>
-                    <h3>توقف الإشعارات</h3>
-                  </div>
-                  <div class="content">
-                    <p>هنالك العديد من الأنواع المتوفرة لنصوص لوريم إيبسوم، ولكن الغالبية تم تعديلها بشكل </p>
-                    <label class="notification-toggle">
-                      <input type="checkbox" checked>
-                      <span class="toggle-slider"></span>
-                    </label>
-                  </div>
-                </div>
                 <div class="card">
                   <div class="header">
                     <i class="fas fa-trash-can"></i>
@@ -113,7 +110,8 @@
             </div>
             <div class="download-content tab-content" data-content="downloads">
               <div class="header">
-                <p>نوع التبرع</p>
+                <p>برنامج التبرع</p>
+                <p>طريقة التبرع</p>
                 <p>الجهة</p>
                 <p>التاريخ</p>
                 <p>الإجمالى</p>
@@ -121,24 +119,28 @@
               <ul class="content">
                 <li class="item">
                   <p>كفالة طفل</p>
+                  <p>الدفع عبر الإنترنت</p>
                   <p> بناء مسجد</p>
                   <p>2025-01-01</p>
                   <p>1000 <img src="../../assets/ryal.svg" alt="ريال سعودي"></p>
                 </li>
                 <li class="item">
                   <p>كفالة طفل</p>
+                  <p>الدفع عبر الإنترنت</p>
                   <p> بناء مسجد</p>
                   <p>2025-01-01</p>
                   <p>1000 <img src="../../assets/ryal.svg" alt="ريال سعودي"></p>
                 </li>
                 <li class="item">
                   <p>كفالة طفل</p>
+                  <p>الدفع عبر الإنترنت</p>
                   <p> بناء مسجد</p>
                   <p>2025-01-01</p>
                   <p>1000 <img src="../../assets/ryal.svg" alt="ريال سعودي"></p>
                 </li>
                 <li class="item">
                   <p>كفالة طفل</p>
+                  <p>الدفع عبر الإنترنت</p>
                   <p> بناء مسجد</p>
                   <p>2025-01-01</p>
                   <p>1000 <img src="../../assets/ryal.svg" alt="ريال سعودي"></p>
@@ -176,6 +178,21 @@
                 </li>
 
               </ul>
+              <div class="settings-div">
+                <div class="card">
+                 
+                  <div class="content"><div class="header">
+                    <i class="fas fa-bell"></i>
+                    <h3>توقف الإشعارات</h3>
+                  </div>
+                    <label class="notification-toggle">
+                      <input type="checkbox" checked>
+                      <span class="toggle-slider"></span>
+                    </label>
+                  </div>
+                </div>
+
+              </div>
 
 
             </div>

@@ -18,20 +18,24 @@
   padding: var(--y-space-16);
   width: 100%;
 }
+.products-page-section .container .sidebar .buttons input {
+  display: none;
+}
 .products-page-section .container .products-grid {
   grid-template-columns: repeat(3, 1fr);
 }
-.products-page-section .container .sidebar .buttons button {
+.products-page-section .container .sidebar .buttons .btn {
   justify-content: flex-start;
   text-wrap: nowrap;
 }
 
-.products-page-section .container .sidebar .buttons button i {
+.products-page-section .container .sidebar .buttons .btn i {
   width: 24px;
   height: 24px;
   object-fit: contain;
 }
-.products-page-section .container .sidebar .buttons button.active {
+.products-page-section .container .sidebar .buttons .btn.active,
+.products-page-section .container .sidebar .buttons input:checked + .btn {
   background-color: var(--y-color-secondary) !important;
 }
 .sidebar-toggle-checkbox {

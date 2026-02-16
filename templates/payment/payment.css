@@ -69,14 +69,8 @@
   gap: var(--y-space-16);
 }
 
-.payment-section form {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: var(--y-space-16);
-}
-
 .payment-section :is(input, select, textarea) {
-  width: auto;
+  width: 100%;
   padding: var(--y-space-12) var(--y-space-12);
   border: 1px solid var(--y-color-primary);
   border-radius: var(--y-space-14);
@@ -84,6 +78,12 @@
   transition: border-color var(--y-transition), box-shadow var(--y-transition);
   margin-bottom: var(--y-space-12);
   margin-inline: var(--y-space-4);
+}
+input[type="radio"] {
+  margin-bottom: 0;
+}
+.payment-section :is(input[type="radio"], input[type="checkbox"]) {
+  width: auto;
 }
 
 .payment-section :is(input, select, textarea):focus {
@@ -216,6 +216,7 @@ form > .payment-option {
 
 .payment-option:has(.y-toggle-input:checked) .y-toggle-content {
   max-height: 20rem;
+  margin: 0 var(--y-space-4);
 }
 
 .buttons {
@@ -250,7 +251,7 @@ form > .payment-option {
   gap: var(--y-space-4);
 }
 .radio-group img {
-  height: var(--y-space-50);
+  height: var(--y-space-24);
   object-fit: contain;
 }
 

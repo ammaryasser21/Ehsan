@@ -19,6 +19,8 @@
   <link rel="stylesheet" href="../../components/toggle.css" />
   <link rel="stylesheet" href="../../components/panner.css" />
   <link rel="stylesheet" href="../../components/special-form.css" />
+  <link rel="stylesheet" href="../../components/popup.css" />
+  <link rel="stylesheet" href="../../components/breadcrumbs.css" />
 
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -37,6 +39,10 @@
 
     <section class="contact-form-section">
       <div class="container y-u-max-w-1200">
+        <div class="breadcrumbs">
+          <a href="../layout/index.html">الرئيسية</a>
+          <p class="active"> تواصل معنا</p>
+        </div>
         <div class="header">
           <img src="../../assets/email-white.svg" alt="أيقونة بريد إلكتروني">
           <h2>يسعدنا إستقبال رسالتك</h2>
@@ -44,7 +50,7 @@
         <div class="right-left">
           <div class="right">
 
-            <form action="">
+            <form action="" id="contact-form">
               <div class="form-group">
                 <div class="group">
                   <label for="name">الاسم ثلاثي</label>
@@ -57,8 +63,8 @@
               </div>
               <div class="form-group">
                 <div class="group">
-                  <label for="number"> رقم الهاتف</label>
-                  <input type="number" id="number" name="number" placeholder="+966 12 345 6789">
+                  <label for="number"> رقم الهاتف</label> 
+                  <input type="tel" id="number" name="number" placeholder="05xxxxxxxx">
                 </div>
                 <div class="group">
                   <label for="text"> موضوع الرسالة</label>
@@ -103,7 +109,20 @@
 
   <y-footer></y-footer>
 
+  <div class="popup-overlay" id="paymentSuccessPopup">
+    <div class="popup-content">
+      <i class="fa-solid fa-circle-check success-icon"></i>
+      <h2>تم إرسال رسالتك بنجاح</h2>
+      <a href="../layout/index.html" class="btn-home">
+        العودة إلى الرئيسية
+        <i class="fa-solid fa-arrow-left"></i>
+      </a>
+    </div>
+  </div>
+
+  <script src="https://unpkg.com/just-validate@latest/dist/just-validate.production.min.js"></script>
   <script src="../../js/y-app-init.js"></script>
+  <script src="../../js/form-validation.js"></script>
 </body>
 
 </html>

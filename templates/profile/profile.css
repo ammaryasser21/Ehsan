@@ -156,6 +156,17 @@
   padding: var(--y-space-24);
   border-radius: var(--y-space-22);
 }
+.profile-section .favorite-content .settings-div {
+  border: none;
+  padding: 0;
+}
+.profile-section .favorite-content .settings-div .card .content {
+  display: grid;
+  grid-template-columns: 247px auto;
+}
+.profile-section .favorite-content h3{
+  color: var(--y-color-text);
+}
 .profile-section .settings-div .card {
   display: flex;
   flex-direction: column;
