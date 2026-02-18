@@ -21,6 +21,7 @@
   <link rel="stylesheet" href="../../components/panner.css" />
   <link rel="stylesheet" href="../../components/products.css" />
   <link rel="stylesheet" href="../../components/breadcrumbs.css" />
+  <link rel="stylesheet" href="../../components/filters.css" />
   <link rel="stylesheet" href="./activities.css" />
 </head>
 
@@ -34,6 +35,69 @@
         <div class="breadcrumbs">
           <a href="../layout/index.html">الرئيسية</a>
           <p class="active"> الأنشطة</p>
+        </div>
+        <div class="accordion-dropdown">
+          <div class="dropdown-trigger btn-white">
+            <span>الكل</span>
+            <i class="fa-solid fa-chevron-down dropdown-arrow"></i>
+          </div>
+          <div class="accordion-panel">
+            <div class="accordion-panel-header">
+              <button class="accordion-panel-close" aria-label="إغلاق">
+                <i class="fa-solid fa-xmark"></i>
+              </button>
+              <h3>البرامج</h3>
+            </div>
+            <div class="accordion-panel-body">
+              <div class="accordion-group">
+                <button class="accordion-trigger">
+                  <span>التعليم</span>
+                  <i class="fa-solid fa-chevron-down accordion-arrow"></i>
+                </button>
+                <ul class="accordion-content">
+                  <li data-category="education-general">التعليم</li>
+                </ul>
+              </div>
+              <div class="accordion-group">
+                <button class="accordion-trigger">
+                  <span>الصحة</span>
+                  <i class="fa-solid fa-chevron-down accordion-arrow"></i>
+                </button>
+                <ul class="accordion-content">
+                  <li data-category="health-care">الرعاية الصحية</li>
+                </ul>
+              </div>
+              <div class="accordion-group">
+                <button class="accordion-trigger">
+                  <span>البناء والتعمير</span>
+                  <i class="fa-solid fa-chevron-down accordion-arrow"></i>
+                </button>
+                <ul class="accordion-content">
+                  <li data-category="construction-education">لتعليم</li>
+                  <li data-category="construction-general">التعليم</li>
+                  <li data-category="orphan-marriage">زواج يتيمات</li>
+                </ul>
+              </div>
+              <div class="accordion-group">
+                <button class="accordion-trigger">
+                  <span>الاغاثة</span>
+                  <i class="fa-solid fa-chevron-down accordion-arrow"></i>
+                </button>
+                <ul class="accordion-content">
+                  <li data-category="relief">الإغاثة</li>
+                </ul>
+              </div>
+              <div class="accordion-group">
+                <button class="accordion-trigger">
+                  <span>سداد الديون</span>
+                  <i class="fa-solid fa-chevron-down accordion-arrow"></i>
+                </button>
+                <ul class="accordion-content">
+                  <li data-category="debt-repayment">سداد الديون</li>
+                </ul>
+              </div>
+            </div>
+          </div>
         </div>
         <div class="products-grid">
 
@@ -115,6 +179,7 @@
 
   <y-footer></y-footer>
   <script src="../../js/y-app-init.js"></script>
+  <script src="../../js/dropdown.js"></script>
 </body>
 
 </html>

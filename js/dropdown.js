@@ -147,6 +147,113 @@ if (document.readyState === "loading") {
   initCustomDropdowns();
 }
 
+class AccordionDropdown {
+  constructor(wrapper) {
+    this.wrapper = wrapper;
+    this.trigger = wrapper.querySelector(".dropdown-trigger");
+    this.panel = wrapper.querySelector(".accordion-panel");
+    this.closeBtn = this.panel.querySelector(".accordion-panel-close");
+    this.arrow = wrapper.querySelector(".dropdown-arrow");
+    this.groups = this.panel.querySelectorAll(".accordion-group");
+    this.isOpen = false;
+    this.init();
+  }
+
+  init() {
+    this.trigger.addEventListener("click", (e) => {
+      e.stopPropagation();
+      this.toggle();
+    });
+
+    this.closeBtn.addEventListener("click", (e) => {
+      e.stopPropagation();
+      this.close();
+    });
+
+    this.panel.addEventListener("click", (e) => e.stopPropagation());
+
+    document.addEventListener("click", (e) => {
+      if (!this.wrapper.contains(e.target) && this.isOpen) {
+        this.close();
+      }
+    });
+
+    this.groups.forEach((group) => {
+      const btn = group.querySelector(".accordion-trigger");
+      btn.addEventListener("click", (e) => {
+        e.stopPropagation();
+        this.toggleGroup(group);
+      });
+
+      group.querySelectorAll(".accordion-content li").forEach((item) => {
+        item.addEventListener("click", (e) => {
+          e.stopPropagation();
+          this.selectItem(item);
+        });
+      });
+    });
+  }
+
+  toggle() {
+    this.isOpen ? this.close() : this.open();
+  }
+
+  open() {
+    document.querySelectorAll(".accordion-dropdown.open").forEach((el) => {
+      if (el !== this.wrapper) el.classList.remove("open");
+    });
+    this.wrapper.classList.add("open");
+    this.isOpen = true;
+    if (this.arrow) this.arrow.style.transform = "rotate(180deg)";
+  }
+
+  close() {
+    this.wrapper.classList.remove("open");
+    this.isOpen = false;
+    if (this.arrow) this.arrow.style.transform = "";
+  }
+
+  toggleGroup(group) {
+    const wasOpen = group.classList.contains("open");
+    this.groups.forEach((g) => g.classList.remove("open"));
+    if (!wasOpen) group.classList.add("open");
+  }
+
+  selectItem(item) {
+    this.panel.querySelectorAll(".accordion-content li").forEach((li) => {
+      li.classList.remove("selected");
+    });
+    item.classList.add("selected");
+
+    const span = this.trigger.querySelector("span");
+    if (span) span.textContent = item.textContent;
+
+    const event = new CustomEvent("accordion-select", {
+      detail: {
+        text: item.textContent.trim(),
+        category: item.dataset.category || "",
+        element: item,
+      },
+      bubbles: true,
+    });
+    this.wrapper.dispatchEvent(event);
+
+    this.close();
+  }
+}
+
+function initAccordionDropdowns() {
+  document.querySelectorAll(".accordion-dropdown").forEach((wrapper) => {
+    wrapper._accordionInstance = new AccordionDropdown(wrapper);
+  });
+}
+
+if (document.readyState === "loading") {
+  document.addEventListener("DOMContentLoaded", initAccordionDropdowns);
+} else {
+  initAccordionDropdowns();
+}
+
 if (typeof module !== "undefined" && module.exports) {
-  module.exports = { CustomDropdown, initCustomDropdowns };
+  module.exports = { CustomDropdown, initCustomDropdowns, AccordionDropdown, initAccordionDropdowns };
 }

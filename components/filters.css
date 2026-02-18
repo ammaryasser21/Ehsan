@@ -196,3 +196,165 @@ html[dir="rtl"] .filter-left .dropdown-options {
     font-size: var(--y-font-14);
   }
 }
+
+/* ── Accordion Floating Dropdown ── */
+
+.accordion-dropdown {
+  position: relative;
+  display: inline-block;
+  padding: var(--y-space-12);
+  border-radius: var(--y-space-8);
+  border: 1px solid var(--y-color-input-border);
+  background: var(--y-color-header-footer);
+  color: var(--y-color-text) !important;
+}
+
+.accordion-dropdown .dropdown-trigger {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  user-select: none;
+}
+
+.accordion-dropdown .dropdown-arrow {
+  font-size: 0.8em;
+  transition: transform 0.3s ease;
+}
+
+.accordion-panel {
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  width: 260px;
+  max-height: 420px;
+  overflow-y: auto;
+  background: var(--y-color-bg, #fff);
+  border-radius: var(--y-space-16);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+  border: 1px solid #e0e0e0;
+  z-index: 200;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-8px);
+  transition: opacity 0.25s ease, transform 0.25s ease, visibility 0.25s ease;
+}
+
+.accordion-dropdown.open .accordion-panel {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.accordion-panel-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--y-space-16) var(--y-space-20);
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.accordion-panel-header h3 {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--y-color-text, #050d06);
+  margin: 0;
+}
+
+.accordion-panel-close {
+  background: none;
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 0.85rem;
+  color: var(--y-color-text, #333);
+  transition: var(--y-transition, all 200ms ease);
+}
+
+.accordion-panel-close:hover {
+  background: #f0f0f0;
+}
+
+.accordion-panel-body {
+  padding: var(--y-space-4) 0;
+}
+
+/* ── Accordion groups ── */
+
+.accordion-group {
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.accordion-group:last-child {
+  border-bottom: none;
+}
+
+.accordion-trigger {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: var(--y-space-14) var(--y-space-20);
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--y-color-primary, #388E3C);
+  transition: var(--y-transition, all 200ms ease);
+}
+
+.accordion-trigger:hover {
+  background: #f5f9f5;
+}
+
+.accordion-arrow {
+  font-size: 0.7em;
+  color: var(--y-color-primary, #388E3C);
+  transition: transform 0.3s ease;
+}
+
+.accordion-group.open .accordion-arrow {
+  transform: rotate(180deg);
+}
+
+.accordion-content {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.accordion-group.open .accordion-content {
+  max-height: 300px;
+}
+
+.accordion-content li {
+  padding: var(--y-space-10) var(--y-space-28);
+  font-size: 0.9rem;
+  color: var(--y-color-text, #050d06);
+  cursor: pointer;
+  transition: var(--y-transition, all 200ms ease);
+  text-align: right;
+}
+
+.accordion-content li:hover {
+  background: #f5f9f5;
+}
+
+.accordion-content li.selected {
+  background: var(--y-color-primary, #388E3C);
+  color: var(--y-color-bg, #fff);
+  font-weight: 600;
+  border-radius: var(--y-space-8);
+  margin: var(--y-space-4) var(--y-space-10);
+  padding: var(--y-space-10) var(--y-space-18);
+}
